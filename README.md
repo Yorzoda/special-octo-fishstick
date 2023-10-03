@@ -7,7 +7,7 @@
 ## rabbitmq std library for a client initialization
     github.com/rabbitmq/amqp091-go
 
-## creating command line interfaces
+## creating command line interfaces ✅
     github.com/spf13/cobra
 
 ##  dependency injection 

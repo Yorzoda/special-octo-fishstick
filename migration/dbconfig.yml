@@ -1,0 +1,5 @@
+development:
+  dialect: postgres
+  datasource: dbname=effective_mobile user=postgres password=root sslmode=disable
+  dir: ../migration
+  table: user
