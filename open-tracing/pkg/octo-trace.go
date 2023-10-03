@@ -2,10 +2,11 @@ package pkg
 
 import (
 	"fmt"
+	"io"
+
 	"github.com/opentracing/opentracing-go"
 	"github.com/uber/jaeger-client-go"
 	config "github.com/uber/jaeger-client-go/config"
-	"io"
 )
 
 func InitJager(service string) (opentracing.Tracer, io.Closer) {
@@ -28,9 +29,4 @@ func InitJager(service string) (opentracing.Tracer, io.Closer) {
 		panic(fmt.Sprintf("cfg.NewTracer err:%v\n", err))
 	}
 	return trace, closer
-}
-
-
-func printTag(span opentracing.Span){
-	span.Tracer().StartSpan("")
 }
