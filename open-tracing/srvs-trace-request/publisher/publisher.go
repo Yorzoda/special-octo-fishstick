@@ -19,9 +19,9 @@ func main() {
 		span := tracer.StartSpan("publish", ext.RPCServerOption(spanCtx))
 		defer span.Finish()
 
-		helloStr := r.FormValue("helloStr")
+		helloStr := r.FormValue("useless")
 		println(helloStr)
 	})
 
-	log.Fatal(http.ListenAndServe(":8081", nil))
+	log.Fatal(http.ListenAndServe(":8082", nil))
 }

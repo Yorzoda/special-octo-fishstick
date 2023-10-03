@@ -37,7 +37,7 @@ func formatString(ctx context.Context, flag string) string {
 
 	v := url.Values{}
 	v.Set("useless", flag)
-	url := "http://localhost:8081/format?" + v.Encode()
+	url := "http://localhost:8082/format?" + v.Encode()
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		panic(err.Error())
