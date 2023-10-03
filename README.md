@@ -1,9 +1,7 @@
 # special-octo-fishstick
 
-## for input validation
-    github.com/go-playground/validator/v10 
 
-## tracing requests between services and inside a service
+## tracing requests between services and inside a service ✅
     github.com/opentracing/opentracing-go
 
 ## rabbitmq std library for a client initialization
