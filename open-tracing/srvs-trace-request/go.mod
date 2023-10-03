@@ -1,10 +1,12 @@
-module open-tracing
+module trace-services
 
 go 1.21.1
 
 require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/uber/jaeger-client-go v2.30.0+incompatible
+	github.com/yurishkuro/opentracing-tutorial v0.0.0-20221208151422-1923bec92942
+
 )
 
 require (

@@ -3,8 +3,7 @@ package main
 import (
 	"context"
 	"errors"
-
-	"github.com/special-octo-fishstick/open-tracing/pkg"
+	"trace-services/pkg"
 
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/log"
