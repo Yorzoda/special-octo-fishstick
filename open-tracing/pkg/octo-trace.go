@@ -29,3 +29,8 @@ func InitJager(service string) (opentracing.Tracer, io.Closer) {
 	}
 	return trace, closer
 }
+
+
+func printTag(span opentracing.Span){
+	span.Tracer().StartSpan("")
+}
