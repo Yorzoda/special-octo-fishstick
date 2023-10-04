@@ -4,18 +4,15 @@
 ## tracing requests between services and inside a service ✅
     github.com/opentracing/opentracing-go
 
-## rabbitmq std library for a client initialization
-    github.com/rabbitmq/amqp091-go
-
 ## creating command line interfaces ✅
     github.com/spf13/cobra
 
-##  dependency injection 
+##  dependency injection ✅
     go.uber.org/fx
 
 
-## for managing db migrations
+## for managing db migrations ✅
     github.com/rubenv/sql-migrate 
 
-## as http router, request parser, with plenty useful mids 
+## as http router, request parser, with plenty useful mids ...30%
     github.com/labstack/echo

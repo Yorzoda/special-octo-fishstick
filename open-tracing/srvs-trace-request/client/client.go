@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
+	"github.com/special-octo-fishtick/pkg"
 	"net/http"
 	"net/url"
 	"os"
-	"trace-services/pkg"
 
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
