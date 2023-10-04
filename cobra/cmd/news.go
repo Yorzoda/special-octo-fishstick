@@ -42,7 +42,7 @@ var (
 
 // newsCmd represents the News command
 var newsCmd = &cobra.Command{
-	Use:   "newsTopic",
+	Use:   "getNews",
 	Short: "Wanna know something new?",
 	Long:  `news command gives you a news by your topic or by default return actual non-topic news🥸`,
 	Run: func(cmd *cobra.Command, args []string) {

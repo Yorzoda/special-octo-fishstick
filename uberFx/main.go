@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/special-octo-fishtick/uberFx/controller"
+	"github.com/special-octo-fishstick/uberFx/controller"
 	"go.uber.org/fx"
 	"net/http"
 )

@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"github.com/special-octo-fishtick/pkg"
+	"github.com/special-octo-fishstick/open-tracing/pkg"
 	"net/http"
 	"net/url"
 	"os"
