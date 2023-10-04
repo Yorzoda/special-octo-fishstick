@@ -4,7 +4,7 @@ This file is part of useless CLI application.
 */
 package main
 
-import "cobra/cmd"
+import "github.com/special-octo-fishstick/cobra/cmd"
 
 func main() {
 	cmd.Execute()
