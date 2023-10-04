@@ -13,13 +13,9 @@
 ##  dependency injection 
     go.uber.org/fx
 
-## ORM for querying db
-    gorm.io/gorm - preload
 
 ## for managing db migrations
     github.com/rubenv/sql-migrate 
 
-
-
-
-
+## as http router, request parser, with plenty useful mids 
+    github.com/labstack/echo

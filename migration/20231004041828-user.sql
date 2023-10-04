@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS users
     );
 
 -- +migrate Down
-DROP TABLE IF  EXIST users;
+DROP TABLE IF EXIST users;
