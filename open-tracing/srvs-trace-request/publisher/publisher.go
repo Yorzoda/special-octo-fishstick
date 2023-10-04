@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 	"net/http"
-	"trace-services/pkg"
 
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
+	"github.com/special-octo-fishstick/open-tracing/pkg"
 )
 
 func main() {

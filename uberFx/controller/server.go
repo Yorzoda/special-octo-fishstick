@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func NewHTTPServer(lc fx.Lifecycle, h *echoHandler) *http.Server {
+func NewHTTPServer(lc fx.Lifecycle, h *EchoHandler) *http.Server {
 	srv := &http.Server{Addr: ":8080", Handler: h}
 	lc.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
