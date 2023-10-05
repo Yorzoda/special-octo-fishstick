@@ -6,11 +6,11 @@ import (
 )
 
 type SecondService struct {
-	ServiceD.ForthService
+	*ServiceD.ForthService
 }
 
-func NewSecondSrv() *SecondService {
-	return &SecondService{}
+func NewSecondSrv(frSrv *ServiceD.ForthService) *SecondService {
+	return &SecondService{frSrv}
 }
 
 func (s *SecondService) SecondServerStart() {

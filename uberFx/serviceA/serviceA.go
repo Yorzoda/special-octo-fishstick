@@ -6,11 +6,11 @@ import (
 )
 
 type FirsService struct {
-	serviceC.ThirdService
+	*serviceC.ThirdService
 }
 
-func NewFirstSrv() *FirsService {
-	return &FirsService{}
+func NewFirstSrv(trdSrv *serviceC.ThirdService) *FirsService {
+	return &FirsService{trdSrv}
 }
 
 func (s *FirsService) FirstStartService() {

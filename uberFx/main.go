@@ -3,7 +3,9 @@ package main
 import (
 	"context"
 	"github.com/special-octo-fishstick/uberFx/serviceA"
+	"github.com/special-octo-fishstick/uberFx/serviceA/serviceC"
 	"github.com/special-octo-fishstick/uberFx/serviceB"
+	"github.com/special-octo-fishstick/uberFx/serviceB/ServiceD"
 	"go.uber.org/fx"
 )
 
@@ -17,12 +19,12 @@ func main() {
 	app.Run()
 }
 
-// We also can provide third and fourth service by constructors
-// But we want implement them from firs two services
 func provider() fx.Option {
 	return fx.Provide(
 		serviceA.NewFirstSrv,
 		serviceB.NewSecondSrv,
+		serviceC.NewThirdService,
+		ServiceD.NewForthService,
 	)
 }
 
