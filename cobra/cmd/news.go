@@ -37,30 +37,38 @@ type (
 
 var (
 	newsTopic string
+	page      string
+	language  string
 	resp      Response
 )
 
 // newsCmd represents the News command
 var newsCmd = &cobra.Command{
-	Use:   "getNews",
-	Short: "Wanna know something new?",
-	Long:  `news command gives you a news by your topic or by default return actual non-topic news🥸`,
+	Use:     "getNews",
+	Short:   "Wanna know something new?",
+	Example: "getNews -n Usa -p 10 -l ru ",
+	Long:    `news command gives you a news by your topic🥸`,
 	Run: func(cmd *cobra.Command, args []string) {
-		getNews(newsTopic)
+		getNews()
 	},
 }
 
 func init() {
 
 	rootCmd.AddCommand(newsCmd)
-	newsCmd.Flags().StringVarP(&newsTopic, "newsTopic", "n", "actual", "for getting news topic that you need")
+	newsCmd.Flags().StringVarP(&newsTopic, "newsTopic", "n", "", "Keywords or a phrase to search for (required)")
+	newsCmd.Flags().StringVarP(&page, "page", "p", "", "Use this to get total number of news (optional)")
+	newsCmd.Flags().StringVarP(&language, "language", "l", "en", "Language of required news (optional,by default 'en')")
 	if err := newsCmd.MarkFlagRequired("newsTopic"); err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 }
 
-func getNews(topic string) {
-	url := `https://newsapi.org/v2/everything?apiKey=8f4f98352f1b4a40baac9c7fa1db5e74&q=` + topic
+func getNews() {
+	url := `https://newsapi.org/v2/everything?apiKey=8f4f98352f1b4a40baac9c7fa1db5e74&q=` + newsTopic + `&language=` + language
+	if len(page) != 0 {
+		url += `&pageSize=` + page
+	}
 	response, err := http.Get(url)
 	if err != nil {
 		log.Print("http.Get err:", err)
@@ -79,4 +87,6 @@ func getNews(topic string) {
 		fmt.Println("")
 	}
 
+	fmt.Printf("language %v\n", language)
+	fmt.Println(url)
 }
