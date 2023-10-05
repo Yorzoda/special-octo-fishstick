@@ -75,6 +75,9 @@ func getNews() {
 	}
 	decoder := json.NewDecoder(response.Body)
 	err = decoder.Decode(&resp)
+	if err != nil {
+		log.Println(err)
+	}
 
 	if resp.TotalResults == 0 {
 		fmt.Println("Oops there's no news for this topic🙁,maybe you should try for another one")
