@@ -14,5 +14,5 @@
 ## for managing db migrations ✅
     github.com/rubenv/sql-migrate 
 
-## as http router, request parser, with plenty useful mids ...30%
+## as http router, request parser, with plenty useful mids ✅
     github.com/labstack/echo

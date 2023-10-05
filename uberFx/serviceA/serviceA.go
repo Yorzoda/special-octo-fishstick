@@ -16,5 +16,6 @@ func NewFirstSrv(trdSrv *serviceC.ThirdService) *FirsService {
 func (s *FirsService) FirstStartService() {
 
 	fmt.Println("Started first service...")
+	s.ThirdServiceStart()
 
 }

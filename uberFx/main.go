@@ -37,8 +37,8 @@ func invoker(
 		OnStart: func(ctx context.Context) error {
 			s1.FirstStartService()
 			s2.SecondServerStart()
-			s1.ThirdServiceStart()
-			s2.ForthServiceStart()
+			//s1.ThirdServiceStart()
+			//s2.ForthServiceStart()
 			return nil
 		},
 		OnStop: func(ctx context.Context) error {

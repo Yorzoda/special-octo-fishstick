@@ -15,4 +15,5 @@ func NewSecondSrv(frSrv *ServiceD.ForthService) *SecondService {
 
 func (s *SecondService) SecondServerStart() {
 	fmt.Println("Started second service...")
+	s.ForthServiceStart()
 }
