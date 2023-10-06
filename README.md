@@ -10,9 +10,11 @@
 ##  dependency injection ✅
     go.uber.org/fx
 
-
 ## for managing db migrations ✅
     github.com/rubenv/sql-migrate 
 
 ## as http router, request parser, with plenty useful mids ✅
     github.com/labstack/echo
+
+## rabbitmq std library for a client initialization ✅
+    github.com/rabbitmq/amqp091-go

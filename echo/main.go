@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"io"
 	"net/http"
 	"os"
@@ -14,6 +15,8 @@ const (
 
 func main() {
 	srv := echo.New()
+
+	srv.Use(middleware.Logger())
 
 	srv.GET("/", singleParam)
 	srv.GET("/users/:name", singleParam2)
