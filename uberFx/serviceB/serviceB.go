@@ -2,17 +2,16 @@ package serviceB
 
 import (
 	"fmt"
-	"github.com/special-octo-fishstick/uberFx/serviceB/ServiceD"
 )
 
 type SecondService struct {
-	*ServiceD.ForthService
 }
 
-func NewSecondSrv(frSrv *ServiceD.ForthService) *SecondService {
-	return &SecondService{frSrv}
+func NewSecondSrv() *SecondService {
+	return &SecondService{}
 }
 
-func (s *SecondService) SecondServerStart() {
+func (s *SecondService) SecondServerStart(ch chan bool) {
 	fmt.Println("Started second service...")
+	ch <- true
 }

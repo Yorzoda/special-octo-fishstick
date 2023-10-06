@@ -33,8 +33,6 @@ func provider() fx.Option {
 func invoker(
 	lc fx.Lifecycle,
 	root *ServiceRoot.RootService,
-	s1 *serviceA.FirsService,
-	s2 *serviceB.SecondService,
 ) {
 	lc.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {

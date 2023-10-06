@@ -7,8 +7,8 @@ import (
 )
 
 type RootService struct {
-	*serviceA.FirsService
-	*serviceB.SecondService
+	first  *serviceA.FirsService
+	second *serviceB.SecondService
 }
 
 func NewRootService(first *serviceA.FirsService, second *serviceB.SecondService) *RootService {
@@ -17,9 +17,8 @@ func NewRootService(first *serviceA.FirsService, second *serviceB.SecondService)
 
 func (r *RootService) StartRootService() {
 	fmt.Println("Started root service")
-	r.FirstStartService()
-	r.SecondServerStart()
-	r.ThirdServiceStart()
-	r.ForthServiceStart()
+	ch := make(chan bool)
+	r.first.FirstStartService(ch)
+	r.second.SecondServerStart(ch)
 
 }
