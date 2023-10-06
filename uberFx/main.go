@@ -6,6 +6,7 @@ import (
 	"github.com/special-octo-fishstick/uberFx/serviceA/serviceC"
 	"github.com/special-octo-fishstick/uberFx/serviceB"
 	"github.com/special-octo-fishstick/uberFx/serviceB/ServiceD"
+	ServiceRoot "github.com/special-octo-fishstick/uberFx/serviceRoot"
 	"go.uber.org/fx"
 )
 
@@ -21,6 +22,7 @@ func main() {
 
 func provider() fx.Option {
 	return fx.Provide(
+		ServiceRoot.NewRootService,
 		serviceA.NewFirstSrv,
 		serviceB.NewSecondSrv,
 		serviceC.NewThirdService,
@@ -30,15 +32,13 @@ func provider() fx.Option {
 
 func invoker(
 	lc fx.Lifecycle,
+	root *ServiceRoot.RootService,
 	s1 *serviceA.FirsService,
 	s2 *serviceB.SecondService,
 ) {
 	lc.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
-			s1.FirstStartService()
-			s2.SecondServerStart()
-			//s1.ThirdServiceStart()
-			//s2.ForthServiceStart()
+			root.StartRootService()
 			return nil
 		},
 		OnStop: func(ctx context.Context) error {
