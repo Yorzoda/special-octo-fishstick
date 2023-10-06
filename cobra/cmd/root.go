@@ -1,6 +1,6 @@
 /*
 Copyright © 2023 Yorzoda Behzod <yorzoda.behzod@gmail.com>
-This file is part of useless CLI application.
+This files is part of useless CLI application.
 */
 package cmd
 
@@ -34,7 +34,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cobra.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config files (default is $HOME/.cobra.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

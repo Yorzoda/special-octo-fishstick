@@ -61,7 +61,7 @@ func bindUserInfo(c echo.Context) error {
 
 func uploadFile(c echo.Context) error {
 
-	file, err := c.FormFile("file")
+	file, err := c.FormFile("files")
 	if err != nil {
 		return err
 	}
@@ -82,6 +82,6 @@ func uploadFile(c echo.Context) error {
 		return err
 	}
 
-	return c.String(http.StatusOK, file.Filename+" file uploaded successfully")
+	return c.String(http.StatusOK, file.Filename+" files uploaded successfully")
 
 }

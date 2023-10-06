@@ -1,1 +1,0 @@
-# Actual news topic

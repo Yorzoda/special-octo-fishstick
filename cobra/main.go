@@ -1,6 +1,6 @@
 /*
 Copyright © 2023 Yorzoda Behzod <yorzoda.behzod@gmail.com>
-This file is part of useless CLI application.
+This files is part of useless CLI application.
 */
 package main
 
